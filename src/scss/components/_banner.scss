@@ -1,0 +1,112 @@
+.banner {
+  &__img {
+    margin: 0 auto rem(10) auto;
+    width: rem(1577);
+    height: rem(507);
+
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin: 0 auto rem(40) auto;
+    border-radius: rem(100);
+    padding: rem(4);
+    width: rem(540);
+    background: #e2f8f3;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: rem(2);
+
+    border-radius: rem(160);
+    width: auto;
+    min-width: 0;
+    height: rem(76);
+
+    transition: 0.3s ease;
+
+    &:not(&.active):hover {
+      background: #cdece5;
+    }
+
+    &.active {
+      background: #19b28d;
+
+      .banner__tab-title {
+        color: #fff;
+      }
+
+      .banner__tab-subtitle {
+        color: #e2f8f3;
+      }
+    }
+  }
+
+  &__tab-title {
+    font-weight: 500;
+    font-size: rem(20);
+    letter-spacing: -0.01em;
+    color: #615e71;
+  }
+
+  &__tab-subtitle {
+    font-weight: 500;
+    font-size: rem(12);
+    text-align: center;
+    color: #7e7b8f;
+  }
+
+  &__info {
+    max-width: rem(1391);
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: rem(80);
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0a0620;
+
+    margin-bottom: rem(30);
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: rem(28);
+    line-height: 130%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #0a0620;
+
+    span {
+      position: relative;
+      display: inline-block;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: rem(124);
+        height: rem(10);
+
+        transform: translateX(-50%) translateY(rem(8));
+
+        background-image: url("/img/ui/green-line.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}

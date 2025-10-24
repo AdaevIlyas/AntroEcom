@@ -1,0 +1,23 @@
+.difference {
+  &__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  &__item {
+    width: rem(488);
+    height: rem(488);
+    opacity: 0.6;
+
+    border-radius: 100%;
+    border: rem(2) solid #0a0620;
+    transition: 0.3s ease;
+
+    margin-inline: rem(-71);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

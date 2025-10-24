@@ -1,0 +1,12 @@
+@use "sass:math";
+
+html {
+  // --refRes можно менять в зависимости от макетов в Figma
+  // можно добавлять запросы и убирать не нужные
+  --refRes: 1780;
+  font-size: calc(100vw / var(--refRes) * 10);
+
+  @media (max-width: 530px) {
+    --refRes: 340 !important;
+  }
+}

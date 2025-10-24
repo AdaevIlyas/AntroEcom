@@ -1,0 +1,19 @@
+.top-gradient {
+  position: absolute;
+  z-index: -20;
+  top: 0;
+  left: 0;
+  height: rem(1048);
+  width: 100%;
+  opacity: 0.6;
+
+  pointer-events: none;
+  user-select: none;
+
+  background: radial-gradient(
+    81.15% 100% at 50% 100%,
+    #fff 51.22%,
+    #c2e1ff 84.38%,
+    #8bb3eb 100%
+  );
+}
