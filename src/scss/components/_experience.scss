@@ -308,6 +308,7 @@
       inset: 0;
       border-radius: rem(160);
       background: #7ea5dc;
+      will-change: scale;
 
       transition: 0.3s ease;
     }

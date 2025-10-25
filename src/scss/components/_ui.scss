@@ -1,3 +1,15 @@
+.only-desktop {
+  @include mobile {
+    display: none;
+  }
+}
+
+.only-mobile {
+  @include not_mobile {
+    display: none;
+  }
+}
+
 .top-gradient {
   position: absolute;
   z-index: -20;
@@ -16,6 +28,16 @@
     #c2e1ff 84.38%,
     #8bb3eb 100%
   );
+
+  @include mobile {
+    height: rem(765);
+    background: radial-gradient(
+      287.35% 100% at 50% 100%,
+      #fff 51.22%,
+      #c2e1ff 84.38%,
+      #8bb3eb 100%
+    );
+  }
 }
 
 .btn {
@@ -31,6 +53,7 @@
 
   width: 100%;
   height: rem(58);
+  will-change: scale;
 
   &:hover {
     &::before {

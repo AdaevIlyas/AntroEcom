@@ -1,0 +1,228 @@
+.mobile-menu {
+  display: none;
+  width: 100%;
+  height: rem(56);
+  background: var(--bg);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 30;
+  transition-duration: 0.3s;
+  border-radius: rem(24) rem(24) 0 0;
+  padding: rem(8) rem(12);
+  justify-content: space-between;
+  transform: translateY(100%);
+
+  &.scroll {
+    transform: translateY(0);
+  }
+
+  @include mobile {
+    display: flex;
+  }
+
+  &__burger {
+    font-size: rem(12);
+    display: flex;
+    align-items: center;
+    column-gap: rem(8);
+
+    &.js-modal-open {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+    }
+
+    &_open {
+      .mobile-menu__burger-icon {
+        row-gap: rem(0);
+        span:nth-of-type(1) {
+          transform: translateY(1px) rotate(45deg);
+        }
+        span:nth-of-type(2) {
+          transform: translateY(-1px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__burger-icon {
+    width: rem(32);
+    height: rem(32);
+    background: var(--white);
+    border-radius: rem(100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: rem(4);
+    transition-duration: 0.3s;
+
+    span {
+      width: rem(14);
+      height: rem(2);
+      background: var(--black);
+      display: block;
+      border-radius: rem(10);
+      transition-duration: 0.3s;
+      will-change: transform;
+    }
+  }
+
+  &__slide {
+    border-radius: rem(24) rem(24) 0 0;
+    background: var(--bg);
+    height: rem(294);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    padding: rem(36) rem(53) rem(80) rem(53);
+    display: flex;
+    gap: rem(43);
+    transition-duration: 0.3s;
+    transform: translateY(100%);
+    opacity: 0;
+
+    &_open {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+
+    &_first {
+      width: rem(80);
+      flex: 0 0 auto;
+    }
+
+    &_links {
+      row-gap: rem(10);
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(8);
+    color: var(--grayDark);
+    font-size: rem(10);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__social-icon {
+    width: rem(58);
+    height: rem(58);
+    background: var(--white);
+    border-radius: rem(100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: rem(27);
+      height: rem(27);
+    }
+  }
+
+  &__black {
+    height: 100vh;
+    width: 110vw;
+    position: absolute;
+    bottom: 0;
+    left: -5vw;
+    background: #000000;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -99;
+    transition-duration: 0.3s;
+
+    &_show {
+      z-index: -1;
+      pointer-events: all;
+      opacity: 0.6;
+    }
+  }
+
+  &__link {
+    height: rem(36);
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: rem(16);
+    letter-spacing: -0.01em;
+    color: #0a0620;
+  }
+
+  &__order {
+    position: relative;
+
+    font-weight: 500;
+    font-size: rem(12);
+    letter-spacing: -0.01em;
+    line-height: 110%;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(8);
+
+    padding: rem(4) rem(5) rem(4) rem(16);
+
+    width: rem(196);
+    height: rem(40);
+
+    &:hover {
+      &::before {
+        scale: 1.05;
+        background: #1a68d5;
+      }
+    }
+
+    span {
+      position: relative;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: rem(160);
+      background: #498cea;
+
+      transition: 0.3s ease;
+    }
+  }
+
+  &__order-circle {
+    position: relative;
+    flex: 0 0 auto;
+
+    display: grid;
+    place-content: center;
+
+    width: rem(32);
+    height: rem(32);
+    border-radius: 100%;
+
+    background: #1a68d5;
+  }
+
+  &__order-icon {
+    width: rem(14);
+    height: rem(14);
+  }
+}

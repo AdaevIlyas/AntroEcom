@@ -137,4 +137,8 @@ a {
 
 .section {
   margin-block: rem(160);
+
+  @include mobile {
+    margin-block: rem(42);
+  }
 }

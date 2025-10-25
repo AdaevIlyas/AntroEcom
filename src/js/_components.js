@@ -9,3 +9,9 @@ faqSteps();
 
 import { select } from "../js/components/select";
 select();
+
+import { mobileMenu } from "../js/components/mobileMenu";
+mobileMenu();
+
+import { header } from "../js/components/header";
+header();
