@@ -1,0 +1,144 @@
+.how-works {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: rem(120);
+    max-width: rem(1447);
+    margin: 0 auto;
+  }
+
+  &__video {
+    border-radius: rem(50);
+    width: rem(647);
+    height: rem(813);
+
+    flex: 0 0 auto;
+  }
+
+  &__block {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: rem(60);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #0a0620;
+    margin-bottom: rem(60);
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(2, rem(330));
+    justify-content: center;
+    gap: rem(20);
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    min-width: 0;
+
+    &:last-child {
+      margin-top: rem(100);
+    }
+  }
+
+  &__look {
+    align-self: flex-end;
+
+    position: relative;
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #fff;
+
+    max-width: rem(226);
+
+    border-radius: rem(130);
+    padding: rem(26) rem(56);
+
+    // backdrop-filter: blur(rem(50));
+    background: #0a0620;
+  }
+
+  &__look-circle {
+    position: absolute;
+    top: rem(-14);
+    left: rem(-4);
+
+    display: grid;
+    place-content: center;
+
+    width: rem(46);
+    height: rem(46);
+
+    border-radius: 100%;
+    backdrop-filter: blur(rem(34));
+    background: rgba(114, 152, 205, 0.4);
+  }
+
+  &__look-icon {
+    width: rem(20);
+    height: rem(20);
+  }
+
+  //
+  //
+
+  &__item {
+    position: relative;
+
+    border-radius: rem(50);
+    padding: rem(40);
+    width: 100%;
+    background: #f6f6f6;
+  }
+
+  &__item-title {
+    font-weight: 400;
+    font-size: rem(24);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #0a0620;
+    margin-bottom: rem(12);
+  }
+
+  &__item-description {
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #615e71;
+  }
+
+  &__item-circle {
+    position: absolute;
+    top: rem(-14);
+    left: rem(-4);
+
+    display: grid;
+    place-content: center;
+    padding-top: rem(3);
+
+    font-weight: 700;
+    font-size: rem(24);
+    line-height: 110%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #fff;
+
+    width: rem(46);
+    height: rem(46);
+
+    border-radius: 100%;
+    backdrop-filter: blur(rem(34));
+    background: rgba(114, 152, 205, 0.4);
+  }
+}

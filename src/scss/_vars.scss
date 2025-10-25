@@ -2,11 +2,30 @@
 // colors
 :root {
   // base
-  --font-family: "Victor Mono", sans-serif;
+  --font-family: "Graphik LCG", sans-serif;
   --content-width: 1170px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
   // colors
-  --light-color: #fff;
+  --white: #fff;
+  --pink: #fc63d5;
+  --pinkHover: #e055bd;
+  --pinkActive: #c546a4;
+  --pinkBg: #f4a0da;
+  --pinkLight: #f1b7dc;
+  --black: #0a0620;
+  --wave: #1cc0a0;
+  --waveHover: #31e8c4;
+  --green: #3acc20;
+  --greenHover: #55e93b;
+  --greenLight: #acfd9e;
+  --gray: #d6ccd4;
+  --grayLight: #ebebeb;
+  --grayDark: #615e71;
+  --bg: #f6f6f6;
+  --blue: #2780e5;
+  --reviewDark: #012525;
+  --reviewGray: #819494;
+  --reviewBg: #eaebed;
 }
