@@ -4,7 +4,11 @@
   background: #fff;
 
   width: 100%;
-
+  @include mobile {
+    padding: rem(14);
+    border-radius: rem(16);
+    z-index: 1;
+  }
   &__title {
     font-weight: 400;
     font-size: rem(32);
@@ -12,6 +16,11 @@
     letter-spacing: -0.03em;
     color: #0a0620;
     margin-bottom: rem(32);
+    @include mobile {
+      font-size: rem(16);
+      width: rem(250);
+      margin-bottom: rem(22);
+    }
   }
 
   &__fields {
@@ -63,6 +72,9 @@
       background: rgba(139, 179, 235, 0.2);
       border-color: transparent;
     }
+    @include mobile {
+      padding: rem(16.5) rem(22);
+    }
   }
 
   &__field-error {
@@ -99,6 +111,9 @@
 
   &__send {
     margin-top: rem(30);
+    @include mobile {
+      margin-top: rem(22);
+    }
   }
 
   &__agree {
@@ -120,6 +135,10 @@
       &:hover {
         color: #88878b;
       }
+    }
+       @include mobile {
+         margin-top: rem(12);
+       font-size: rem(12);
     }
   }
 }
