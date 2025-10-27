@@ -1,0 +1,120 @@
+.fast {
+  &__wrapper {
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: rem(60);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+
+    margin-bottom: rem(60);
+
+    @include mobile {
+      font-size: rem(22);
+      line-height: 110%;
+      text-wrap: balance;
+
+      margin-bottom: rem(22);
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(10);
+    grid-template-columns: repeat(2, 1fr);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    min-width: 0;
+    min-height: rem(826);
+
+    border-radius: rem(60);
+    padding: rem(60);
+    background: #221e36;
+
+    @include mobile {
+      min-height: auto;
+      border-radius: rem(20);
+      padding: rem(22);
+    }
+
+    &:has(.fast__item-decor) {
+      padding-bottom: rem(630);
+      @include mobile {
+        padding-bottom: rem(227);
+      }
+    }
+  }
+
+  &__item-title {
+    font-weight: 400;
+    font-size: rem(40);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #fff;
+
+    @include mobile {
+      font-size: rem(16);
+    }
+  }
+
+  &__item-description {
+    max-width: rem(420);
+    margin: 0 auto;
+
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
+  &__item-phone {
+    display: block;
+    width: rem(508);
+    height: rem(466);
+
+    margin-block: rem(50);
+    margin-inline: auto;
+
+    object-fit: contain;
+
+    @include mobile {
+      width: rem(264);
+      height: rem(242);
+
+      margin-block: rem(22);
+    }
+  }
+
+  &__item-decor {
+    width: rem(460);
+    height: rem(601);
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    @include mobile {
+      width: rem(157);
+      height: rem(205);
+    }
+  }
+}

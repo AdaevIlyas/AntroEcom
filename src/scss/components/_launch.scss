@@ -12,12 +12,24 @@
     color: #0a0620;
 
     margin-bottom: rem(60);
+
+    @include mobile {
+      font-size: rem(22);
+      line-height: 110%;
+      text-wrap: balance;
+
+      margin-bottom: rem(22);
+    }
   }
 
   &__list {
     display: grid;
     gap: rem(10);
     grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -26,6 +38,15 @@
 
     border-radius: rem(50);
     padding: rem(60) rem(40);
+
+    @include mobile {
+      border-radius: rem(20);
+      padding: rem(22);
+
+      &:has(.launch__item-decor) {
+        padding-bottom: calc(rem(22) + rem(182));
+      }
+    }
 
     &:nth-child(1) {
       background: #e2f0ff;
@@ -46,6 +67,11 @@
     letter-spacing: -0.03em;
     color: #0a0620;
     margin-bottom: rem(20);
+
+    @include mobile {
+      font-size: rem(16);
+      margin-bottom: rem(22);
+    }
   }
 
   &__item-phone {
@@ -54,6 +80,14 @@
     height: rem(410);
 
     margin-block: rem(50);
+
+    @include mobile {
+      width: 100%;
+      height: rem(246);
+      object-fit: contain;
+
+      margin-block: rem(22);
+    }
   }
 
   &__item-description {
@@ -63,6 +97,10 @@
     letter-spacing: -0.03em;
     text-align: center;
     color: #615e71;
+
+    @include mobile {
+      font-size: rem(14);
+    }
 
     &_pink {
       text-align: left;
@@ -109,5 +147,12 @@
 
     width: rem(375);
     height: rem(435);
+
+    @include mobile {
+      position: absolute;
+
+      width: rem(157);
+      height: rem(182);
+    }
   }
 }

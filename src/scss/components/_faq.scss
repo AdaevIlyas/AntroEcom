@@ -32,6 +32,7 @@
     background: #e2f8f3;
     @include mobile {
       width: rem(308);
+      margin-bottom: rem(22);
     }
   }
 
@@ -90,6 +91,12 @@
     &.active {
       display: flex;
     }
+
+    @include mobile {
+      position: relative;
+      flex-direction: column-reverse;
+      gap: rem(6);
+    }
   }
 
   &__step-phone {
@@ -99,6 +106,20 @@
 
     user-select: none;
     pointer-events: none;
+
+    @include mobile {
+      position: absolute;
+
+      top: rem(22);
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: rem(214);
+      height: rem(446);
+      object-fit: contain;
+
+      display: none;
+    }
   }
 
   &__questions {
@@ -108,6 +129,10 @@
 
     flex: 0 0 auto;
     width: rem(318);
+
+    @include mobile {
+      width: auto;
+    }
   }
   &__question {
     font-weight: 500;
@@ -123,6 +148,15 @@
 
     cursor: pointer;
     transition: background 0.3s ease;
+
+    @include mobile {
+      font-size: rem(14);
+      border-radius: rem(24) rem(30) rem(30) rem(6);
+      padding: rem(11) rem(15);
+      min-height: rem(39);
+
+      max-width: fit-content;
+    }
 
     &:hover {
       background: #e6eefa78;
@@ -143,6 +177,10 @@
     align-items: start;
     gap: rem(20);
 
+    @include mobile {
+      gap: rem(6);
+    }
+
     &.active {
       display: flex;
     }
@@ -151,7 +189,7 @@
   &__message {
     display: flex;
     align-items: center;
-    height: rem(54);
+    min-height: rem(54);
 
     font-weight: 500;
     font-size: rem(18);
@@ -163,12 +201,35 @@
     padding: rem(16) rem(20);
 
     background: #8bb3eb;
+
+    @include mobile {
+      font-size: rem(14);
+
+      min-height: rem(39);
+      border-radius: rem(24) rem(30) rem(30) rem(6);
+      padding: rem(11) rem(15);
+    }
   }
 
   &__answer {
     border-radius: rem(8) rem(60) rem(60) rem(60);
     padding: rem(40);
     background: #f6f6f6;
+
+    @include mobile {
+      border-radius: rem(8) rem(24) rem(24) rem(24);
+      padding: rem(22);
+    }
+  }
+
+  &__answer-img {
+    @include mobile {
+      display: block;
+      margin: 0 auto rem(16) auto;
+      width: rem(214);
+      height: rem(446);
+      object-fit: contain;
+    }
   }
 
   &__answer-title {
@@ -178,6 +239,11 @@
     letter-spacing: -0.03em;
     color: #0a0620;
     margin-bottom: rem(30);
+
+    @include mobile {
+      font-size: rem(16);
+      margin-bottom: rem(16);
+    }
   }
 
   &__answer-descriptions {
@@ -188,8 +254,16 @@
       letter-spacing: -0.03em;
       color: #615e71;
 
+      @include mobile {
+        font-size: rem(14);
+      }
+
       &:not(:last-child) {
         margin-bottom: rem(16);
+
+        @include mobile {
+          margin-bottom: rem(8);
+        }
       }
     }
 

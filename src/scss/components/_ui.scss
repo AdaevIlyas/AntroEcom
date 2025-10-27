@@ -55,6 +55,11 @@
   height: rem(58);
   will-change: scale;
 
+  @include mobile {
+    font-size: rem(14);
+    height: rem(40);
+  }
+
   &:hover {
     &::before {
       scale: 1.02;
@@ -130,8 +135,7 @@
   transform: translateY(-50%);
 
   @include mobile {
-    top: rem(18);
-    right: rem(22);
+    right: rem(28);
   }
 }
 
@@ -173,6 +177,11 @@
   padding: rem(9) rem(18);
   border-radius: rem(10);
   font-size: rem(16);
+
+  @include mobile {
+    font-size: rem(14);
+    padding: rem(5) rem(10);
+  }
 }
 
 .select__option:hover {

@@ -13,10 +13,10 @@
   margin-bottom: rem(10);
 
   background: linear-gradient(180deg, #1cae8a 0%, #50bea3 64.55%, #86dfc9 100%);
-@include mobile {
-      padding: rem(48) rem(8) rem(8) rem(8);
-      border-radius: rem(24);
-    }
+  @include mobile {
+    padding: rem(48) rem(8) rem(8) rem(8);
+    border-radius: rem(24);
+  }
   &__decor {
     position: absolute;
 
@@ -29,9 +29,9 @@
     left: 0;
     width: rem(424);
     @include mobile {
-        width: rem(129);
-        left: rem(-6);
-        top: rem(-15);
+      width: rem(129);
+      left: rem(-6);
+      top: rem(-15);
     }
   }
 
@@ -40,9 +40,9 @@
     right: 0;
     width: rem(389);
     @include mobile {
-        width: rem(176);
-        right: rem(-36);
-        top: rem(-30);
+      width: rem(176);
+      right: rem(-36);
+      top: rem(-30);
     }
   }
 
@@ -58,9 +58,9 @@
       position: relative;
       font-size: rem(26);
       z-index: 1;
-    text-align: left;
-    padding-left: rem(14);
-    margin-bottom: rem(22);
+      text-align: left;
+      padding-left: rem(14);
+      margin-bottom: rem(22);
     }
   }
 
@@ -71,7 +71,7 @@
     @include mobile {
       position: relative;
       z-index: 1;
-          gap: rem(6);
+      gap: rem(6);
       grid-template-columns: repeat(1, rem(292));
     }
   }
@@ -112,7 +112,7 @@
     color: #fff;
     margin-bottom: rem(16);
     @include mobile {
-    margin-bottom: rem(8);
+      margin-bottom: rem(8);
       font-size: rem(16);
     }
   }
@@ -149,15 +149,15 @@
       #fff 0%,
       rgba(255, 255, 255, 0) 100%
     );
-    @include mobile {
-      padding: rem(16) rem(8) rem(8) rem(8); 
-      border-radius: rem(24);
-       gap: rem(143);
-      flex-direction: column;
-    }
+  @include mobile {
+    padding: rem(16) rem(8) rem(8) rem(8);
+    border-radius: rem(24);
+    gap: rem(143);
+    flex-direction: column;
+  }
   &__left {
     flex: 0 0 rem(907);
-     @include mobile {
+    @include mobile {
       flex: 0 0 rem(95);
     }
   }
@@ -180,7 +180,7 @@
     @include mobile {
       padding: rem(10) rem(14);
       font-size: rem(12);
-      margin: 0 auto;
+      margin-left: rem(14);
       margin-bottom: rem(12);
     }
   }
@@ -191,7 +191,7 @@
     line-height: 110%;
     letter-spacing: -0.05em;
     color: #fff;
-     @include mobile {
+    @include mobile {
       font-size: rem(22);
       padding-left: rem(14);
       text-align: left;
@@ -209,11 +209,11 @@
 
     user-select: none;
     pointer-events: none;
-     @include mobile {
-   width: rem(340);
-    height: rem(340);
-    top: rem(54);
-    left: rem(-48);
+    @include mobile {
+      width: rem(340);
+      height: rem(340);
+      top: rem(54);
+      left: rem(-48);
     }
   }
 
@@ -223,7 +223,7 @@
     display: flex;
     align-items: end;
     gap: rem(20);
-     @include mobile {
+    @include mobile {
       flex-direction: column-reverse;
       align-items: center;
     }
@@ -236,10 +236,11 @@
     border-radius: rem(500);
     padding: rem(10);
     background: rgba(114, 152, 205, 0.3);
-      @include mobile {
-      flex-direction: row;
-    background: unset;
 
+    @include mobile {
+      padding: rem(8);
+      flex-direction: row;
+      // background: unset;
     }
   }
 
@@ -263,9 +264,10 @@
         scale: 0.94;
       }
     }
-      @include mobile {
-          width: rem(40);
-    height: rem(40);
+
+    @include mobile {
+      width: rem(40);
+      height: rem(40);
     }
   }
 

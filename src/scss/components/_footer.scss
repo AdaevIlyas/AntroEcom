@@ -13,10 +13,10 @@
 
     @include mobile {
       flex-direction: column;
-      border-radius: rem(30);
-      padding: rem(28);
-      padding-bottom: rem(75);
-      row-gap: rem(17);
+      border-radius: rem(20);
+      padding: rem(22);
+      padding-bottom: rem(58);
+      row-gap: rem(22);
     }
   }
 
@@ -25,15 +25,19 @@
     flex-direction: column;
     row-gap: rem(8);
 
+    @include mobile {
+      row-gap: rem(6);
+    }
+
     &_row {
       flex-direction: row;
       column-gap: rem(12);
 
       @include mobile {
         position: absolute;
-        right: rem(28);
+        right: rem(22);
         flex-direction: column;
-        row-gap: rem(14);
+        row-gap: rem(12);
       }
     }
 
@@ -44,10 +48,9 @@
       flex-wrap: wrap;
 
       @include mobile {
-        margin-top: rem(14);
-        margin-bottom: rem(14);
+        margin: rem(0);
         column-gap: rem(18);
-        max-width: rem(150);
+        max-width: rem(180);
       }
     }
 
@@ -79,7 +82,7 @@
 
   &__text {
     color: var(--grayDark);
-    font-size: rem(16);
+    font-size: rem(12);
 
     &_link {
       transition-duration: 0.3s;
@@ -111,6 +114,10 @@
     color: var(--black);
     transition-duration: 0.3s;
 
+    @include mobile {
+      font-size: rem(16);
+    }
+
     &:hover {
       color: var(--pink);
     }
@@ -137,8 +144,8 @@
     }
 
     @include mobile {
-      width: rem(48);
-      height: rem(48);
+      width: rem(40);
+      height: rem(40);
     }
   }
 

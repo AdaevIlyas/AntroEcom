@@ -7,7 +7,7 @@
     margin: 0 auto;
     @include mobile {
       flex-direction: column-reverse;
-         gap: rem(12);
+      gap: rem(12);
     }
   }
 
@@ -15,9 +15,10 @@
     border-radius: rem(50);
     width: rem(647);
     height: rem(813);
-    
+
     flex: 0 0 auto;
     @include mobile {
+      border-radius: rem(24);
       width: rem(308);
       height: rem(387);
     }
@@ -49,7 +50,7 @@
     gap: rem(20);
     @include mobile {
       grid-template-columns: repeat(1, rem(308));
-        gap: rem(6);
+      gap: rem(6);
     }
   }
 
@@ -58,9 +59,9 @@
     flex-direction: column;
     gap: rem(20);
     min-width: 0;
-      @include mobile {
-        gap: rem(6);
-      }
+    @include mobile {
+      gap: rem(6);
+    }
     &:last-child {
       margin-top: rem(100);
       @include mobile {
@@ -71,7 +72,7 @@
 
   &__look {
     align-self: flex-end;
-   
+
     position: relative;
     font-weight: 500;
     font-size: rem(20);
@@ -190,7 +191,7 @@
     background: rgba(114, 152, 205, 0.4);
     @include mobile {
       width: rem(24);
-      height: rem(24); 
+      height: rem(24);
       font-size: rem(16);
       top: rem(-4);
       left: rem(-4);
