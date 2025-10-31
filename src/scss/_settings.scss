@@ -134,11 +134,11 @@ a {
 
   // // тестовое св-во, чтобы не прыгала страница, если прыгает, убираем
   overflow-y: hidden;
+  height: 100dvh;
 
-  body {
-    overflow: scroll;
-    height: 100dvh;
-  }
+  // body {
+  //   overflow-y: hidden;
+  // }
 }
 
 .section {
