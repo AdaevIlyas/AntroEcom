@@ -15,3 +15,6 @@ mobileMenu();
 
 import { header } from "../js/components/header";
 header();
+
+import { feedbackFormAjax } from "../js/components/feedbackFormAjax";
+feedbackFormAjax();
