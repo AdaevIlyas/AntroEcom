@@ -131,6 +131,7 @@
 
     user-select: none;
     pointer-events: none;
+    object-fit: contain;
 
     @include mobile {
       position: absolute;
@@ -141,7 +142,6 @@
 
       width: rem(214);
       height: rem(446);
-      object-fit: contain;
 
       display: none;
     }

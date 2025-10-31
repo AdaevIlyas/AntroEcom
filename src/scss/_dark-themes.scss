@@ -245,14 +245,18 @@
     background: #221e36;
   }
 
-  .faq__tab {
-    &.active {
-      background: #92cd82;
-    }
+  .faq__tabs-info {
+    color: #fff;
+  }
 
-    &:not(&.active):hover {
-      background: #92cd8211;
-    }
+  .faq__tab {
+    // &.active {
+    //   background: #92cd82;
+    // }
+
+    // &:not(&.active):hover {
+    //   background: #92cd8211;
+    // }
   }
   .faq__tab-title {
     color: #a7a5af;

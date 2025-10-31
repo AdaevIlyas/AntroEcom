@@ -33,7 +33,6 @@ export default function faqSteps() {
   //     });
   //   });
   // }
-
   function initFaqQuestions() {
     const questions = document.querySelectorAll(".faq__question");
 
@@ -59,9 +58,57 @@ export default function faqSteps() {
         );
         if (activeMessage) {
           activeMessage.classList.add("active");
+
+          // Обновляем изображение телефона
+          updatePhoneImage(activeMessage);
         }
       });
     });
+
+    // Инициализируем изображение для первого активного вопроса
+    const initialActiveMessage = document.querySelector(
+      ".faq__messages.active"
+    );
+    if (initialActiveMessage) {
+      updatePhoneImage(initialActiveMessage);
+    }
+  }
+
+  function updatePhoneImage(activeMessage) {
+    // Находим блок с телефоном в текущем шаге
+    const stepBlock = activeMessage.closest(".faq__step");
+    const phoneImage = stepBlock.querySelector(".faq__step-phone");
+
+    if (!phoneImage) return;
+
+    // Ищем изображение внутри активного сообщения
+    const messageImage = activeMessage.querySelector(".faq__answer-img");
+
+    if (messageImage) {
+      // Берем src из изображения в сообщении
+      const newSrc = messageImage.getAttribute("src");
+      phoneImage.setAttribute("src", newSrc);
+
+      // Также обновляем alt текст, если он есть
+      const altText = messageImage.getAttribute("alt");
+      if (altText) {
+        phoneImage.setAttribute("alt", altText);
+      }
+    } else {
+      // Если в сообщении нет изображения, используем изображение из первого сообщения как fallback
+      const firstMessage = stepBlock.querySelector(".faq__messages");
+      const firstMessageImage = firstMessage?.querySelector(".faq__answer-img");
+
+      if (firstMessageImage) {
+        const fallbackSrc = firstMessageImage.getAttribute("src");
+        phoneImage.setAttribute("src", fallbackSrc);
+
+        const altText = firstMessageImage.getAttribute("alt");
+        if (altText) {
+          phoneImage.setAttribute("alt", altText);
+        }
+      }
+    }
   }
 
   function resetActiveQuestion() {
@@ -92,6 +139,8 @@ export default function faqSteps() {
       );
       if (firstMessage) {
         firstMessage.classList.add("active");
+        // Обновляем изображение для первого сообщения
+        updatePhoneImage(firstMessage);
       }
     }
   }
@@ -140,6 +189,15 @@ export default function faqSteps() {
           ? activeMessage.getAttribute("data-message-block")
           : null,
       };
+    },
+
+    // Получение текущего URL изображения телефона
+    getCurrentPhoneImage: function () {
+      const activeStep = document.querySelector(".faq__step.active");
+      if (!activeStep) return null;
+
+      const phoneImage = activeStep.querySelector(".faq__step-phone");
+      return phoneImage ? phoneImage.getAttribute("src") : null;
     },
   };
 }
