@@ -15,26 +15,27 @@
                 </div>
                 <div class="call-blue__right">
                     <div class="call-blue__socials">
-                        <a href="" class="call-blue__social">
+                        <a target="_blank" href="https://t.me/antro_cx" class="call-blue__social">
                             <img src="/img/ui/tg.svg" alt="" class="call-blue__social-icon">
                         </a>
-                        <a href="" class="call-blue__social">
+                        <a target="_blank" href="https://wa.me/79136599359" class="call-blue__social">
                             <img src="/img/ui/wa.svg" alt="" class="call-blue__social-icon">
                         </a>
-                        <a href="" class="call-blue__social">
+                        <a target="_blank" href="mailto:hello@antro.cx" class="call-blue__social">
                             <img src="/img/ui/mail.svg" alt="" class="call-blue__social-icon">
                         </a>
                     </div>
-                    <form action="" class="form call-blue__form">
+                    <form action="" class="form call-blue__form js-form">
                         <div class="form__title">
                             Проконсультируем, расскажем, как мы работаем и составим КП
                         </div>
                         <div class="form__fields">
-                            <label class="form__field error">
+                            <label class="form__field">
                                 <div class="form__field-error">
                                     <img src="/img/ui/white-warn.svg" alt="" class="form__field-error-icon">
                                 </div>
-                                <input type="text" placeholder="Имя" name="name" class="form__field-input">
+                                <input type="text" placeholder="Имя" name="application-userName"
+                                    data-required="Пожалуйста, введите имя" class="form__field-input">
                                 <div class="form__field-error-text">
                                     Пожалуйста, введите имя
                                 </div>
@@ -43,7 +44,9 @@
                                 <div class="form__field-error">
                                     <img src="/img/ui/white-warn.svg" alt="" class="form__field-error-icon">
                                 </div>
-                                <input type="text" placeholder="Компания" name="company" class="form__field-input">
+                                <input type="text" placeholder="Компания"
+                                    data-required="Пожалуйста, введите название компании" name="application-userCompany"
+                                    class="form__field-input">
                                 <div class="form__field-error-text">
                                     Пожалуйста, введите название компании
                                 </div>
@@ -52,7 +55,9 @@
                                 <div class="form__field-error">
                                     <img src="/img/ui/white-warn.svg" alt="" class="form__field-error-icon">
                                 </div>
-                                <input type="tel" placeholder="Телефон" name="phone" class="form__field-input">
+                                <input type="tel" placeholder="Телефон"
+                                    data-required="Пожалуйста, введите номер телефона" name="application-userTel"
+                                    class="form__field-input">
                                 <div class="form__field-error-text">
                                     Пожалуйста, введите номер телефона
                                 </div>
@@ -61,7 +66,8 @@
                                 <div class="form__field-error">
                                     <img src="/img/ui/white-warn.svg" alt="" class="form__field-error-icon">
                                 </div>
-                                <input type="text" placeholder="Почта" name="email" class="form__field-input">
+                                <input type="text" placeholder="Почта" name="application-userEmail"
+                                    data-required="Пожалуйста, введите email" data-email class="form__field-input">
                                 <div class="form__field-error-text">
                                     Пожалуйста, введите email
                                 </div>
@@ -72,7 +78,9 @@
                                 </div>
                                 <div class="select">
                                     <input class="form__field-input select__value" type="text" autocomplete="off"
-                                        readonly="readonly" placeholder="Способ связи" name="feedback">
+                                        readonly="readonly" placeholder="Способ связи"
+                                        data-required="Пожалуйста, выберите способ связи"
+                                        name="application-userComMethod">
                                     <div class="select__list">
                                         <div data-value="Telegram или WhatsApp" class="select__option">Telegram или
                                             WhatsApp
@@ -86,14 +94,16 @@
                                 </div>
                             </label>
                         </div>
+                        <input type="hidden" name="ct_bot_detector_event_token"
+                            value="0320c138fc60e233d8d9003bf92689834468466179554ec4d2c46317a55c85da">
                         <button class="btn-reset btn form__send" type="submit">
                             <span>Отправить</span>
                         </button>
                         <div class="form__agree">
                             Нажимая на кнопку, вы даете согласие на 
-                            <a href="">обработку персональных данных</a>
+                            <a target="_blank" href="https://antro.cx/agreements/">обработку персональных данных</a>
                             и соглашаетесь с
-                            <a href="">политикой конфиденциальности</a>
+                            <a target="_blank" href="https://antro.cx/agreements/">политикой конфиденциальности</a>
                         </div>
                     </form>
                 </div>
