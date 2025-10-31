@@ -29,7 +29,8 @@
                             <div class="form__field-error">
                                 <img src="/img/ui/white-warn.svg" alt="" class="form__field-error-icon">
                             </div>
-                            <input type="text" placeholder="Имя" name="name" class="form__field-input">
+                            <input type="text" placeholder="Имя" name="application-userName"
+                                data-required="Пожалуйста, введите имя" class="form__field-input">
                             <div class="form__field-error-text">
                                 Пожалуйста, введите имя
                             </div>
@@ -38,7 +39,9 @@
                             <div class="form__field-error">
                                 <img src="/img/ui/white-warn.svg" alt="" class="form__field-error-icon">
                             </div>
-                            <input type="text" placeholder="Компания" name="company" class="form__field-input">
+                            <input type="text" placeholder="Компания"
+                                data-required="Пожалуйста, введите название компании" name="application-userCompany"
+                                class="form__field-input">
                             <div class="form__field-error-text">
                                 Пожалуйста, введите название компании
                             </div>
@@ -47,7 +50,8 @@
                             <div class="form__field-error">
                                 <img src="/img/ui/white-warn.svg" alt="" class="form__field-error-icon">
                             </div>
-                            <input type="tel" placeholder="Телефон" name="phone" class="form__field-input">
+                            <input type="tel" placeholder="Телефон" data-required="Пожалуйста, введите номер телефона"
+                                name="application-userTel" class="form__field-input">
                             <div class="form__field-error-text">
                                 Пожалуйста, введите номер телефона
                             </div>
@@ -56,7 +60,8 @@
                             <div class="form__field-error">
                                 <img src="/img/ui/white-warn.svg" alt="" class="form__field-error-icon">
                             </div>
-                            <input type="text" placeholder="Почта" name="email" class="form__field-input">
+                            <input type="text" placeholder="Почта" name="application-userEmail"
+                                data-required="Пожалуйста, введите email" data-email class="form__field-input">
                             <div class="form__field-error-text">
                                 Пожалуйста, введите email
                             </div>
@@ -67,9 +72,11 @@
                             </div>
                             <div class="select">
                                 <input class="form__field-input select__value" type="text" autocomplete="off"
-                                    readonly="readonly" placeholder="Способ связи" name="feedback">
+                                    readonly="readonly" placeholder="Способ связи"
+                                    data-required="Пожалуйста, выберите способ связи" name="application-userComMethod">
                                 <div class="select__list">
-                                    <div data-value="Telegram или WhatsApp" class="select__option">Telegram или WhatsApp
+                                    <div data-value="Telegram или WhatsApp" class="select__option">Telegram или
+                                        WhatsApp
                                     </div>
                                     <div data-value="Телефон" class="select__option">Телефон</div>
                                     <div data-value="Email" class="select__option">Email</div>
@@ -80,6 +87,8 @@
                             </div>
                         </label>
                     </div>
+                    <input type="hidden" name="ct_bot_detector_event_token"
+                        value="0320c138fc60e233d8d9003bf92689834468466179554ec4d2c46317a55c85da">
                     <button class="btn-reset btn form__send" type="submit">
                         <span>Отправить</span>
                     </button>

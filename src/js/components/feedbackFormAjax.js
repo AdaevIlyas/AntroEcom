@@ -18,10 +18,11 @@ export const feedbackFormAjax = () => {
                     formData.append('action', 'send_email');
                     fetch('https://antro.cx/wp/wp-admin/admin-ajax.php', {
                         method: 'POST',
+                        // mode: 'cors',
                         body: formData
                     }).then(response => response.json()).then(response => {
                         if (response.success) {
-
+                            form.reset();
                             if (form.classList.contains('main-order__form')) {
                                 form.reset();
                                 form.style.display = 'none';
@@ -30,7 +31,7 @@ export const feedbackFormAjax = () => {
                                 form.reset();
                                 document.querySelector(".js-modal-open[data-modal='thanks']").click();
                             } else if (form.name == 'reviewForm') {
-                                form.reset();
+
                                 // document.querySelector(".js-modal-open[data-modal='thanks']").click();
 
                                 const searchParams = new URLSearchParams();
@@ -98,10 +99,10 @@ function validateInput(input) {
 
     // Поиск родительского контейнера
     let errorElement = null;
-    const inputBlock = input.closest('.input-block');
+    const inputBlock = input.closest('.form__field');
     if (inputBlock) {
         // Работа с сообщением об ошибке
-        errorElement = inputBlock.querySelector('.input-block__error');
+        errorElement = inputBlock.querySelector('.form__field-error-text');
     }
 
     if (isError) {
@@ -114,7 +115,7 @@ function validateInput(input) {
         // Создаем элемент ошибки если отсутствует
         if (!errorElement) {
             errorElement = document.createElement('div');
-            errorElement.className = 'input-block__error';
+            errorElement.className = 'form__field__error';
             if (inputBlock) {
                 inputBlock.appendChild(errorElement);
             }
