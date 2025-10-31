@@ -5,7 +5,7 @@ export function disable_scroll() {
   document.querySelector(".page").classList.add("dis-scroll");
   document.querySelector(".page__body").scrollTo({
     top: distance,
-    left: 0,
+    left: 0
   });
 }
 
@@ -14,7 +14,7 @@ export function enable_scroll() {
   if (distance != 0) {
     window.scrollTo({
       top: distance,
-      left: 0,
+      left: 0
     });
   }
 }
