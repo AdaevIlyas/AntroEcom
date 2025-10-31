@@ -1,38 +1,38 @@
 export default function faqSteps() {
   // Инициализация при загрузке DOM
   document.addEventListener("DOMContentLoaded", function () {
-    initFaqTabs();
+    // initFaqTabs();
     initFaqQuestions();
   });
 
-  function initFaqTabs() {
-    const tabs = document.querySelectorAll(".faq__tab");
-    const steps = document.querySelectorAll(".faq__step");
+  // function initFaqTabs() {
+  //   const tabs = document.querySelectorAll(".faq__tab");
+  //   const steps = document.querySelectorAll(".faq__step");
 
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", function () {
-        const step = this.getAttribute("data-step");
+  //   tabs.forEach((tab) => {
+  //     tab.addEventListener("click", function () {
+  //       const step = this.getAttribute("data-step");
 
-        // Убираем активный класс у всех табов
-        tabs.forEach((t) => t.classList.remove("active"));
-        // Добавляем активный класс текущему табу
-        this.classList.add("active");
+  //       // Убираем активный класс у всех табов
+  //       tabs.forEach((t) => t.classList.remove("active"));
+  //       // Добавляем активный класс текущему табу
+  //       this.classList.add("active");
 
-        // Скрываем все шаги
-        steps.forEach((s) => s.classList.remove("active"));
-        // Показываем выбранный шаг
-        const activeStep = document.querySelector(
-          `[data-step-block="${step}"]`
-        );
-        if (activeStep) {
-          activeStep.classList.add("active");
-        }
+  //       // Скрываем все шаги
+  //       steps.forEach((s) => s.classList.remove("active"));
+  //       // Показываем выбранный шаг
+  //       const activeStep = document.querySelector(
+  //         `[data-step-block="${step}"]`
+  //       );
+  //       if (activeStep) {
+  //         activeStep.classList.add("active");
+  //       }
 
-        // Сбрасываем активный вопрос при смене категории
-        resetActiveQuestion();
-      });
-    });
-  }
+  //       // Сбрасываем активный вопрос при смене категории
+  //       resetActiveQuestion();
+  //     });
+  //   });
+  // }
 
   function initFaqQuestions() {
     const questions = document.querySelectorAll(".faq__question");

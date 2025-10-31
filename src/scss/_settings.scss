@@ -8,7 +8,8 @@
 
 html {
   // Разблокировать при необходимости
-  // scroll-behavior: smooth;
+  scroll-behavior: smooth;
+
   overflow-x: clip;
   font-family: "Graphik LC Web", sans-serif;
 }
@@ -121,18 +122,23 @@ a {
 }
 
 .dis-scroll {
-  position: fixed;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  -ms-scroll-chaining: none;
-  overscroll-behavior: none;
-  overflow-x: hidden;
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  // overflow: hidden;
+  // width: 100%;
+  // height: 100vh;
+  // -ms-scroll-chaining: none;
+  // overscroll-behavior: none;
+  // overflow-x: hidden;
 
-  // тестовое св-во, чтобы не прыгала страница, если прыгает, убираем
-  overflow-y: scroll;
+  // // тестовое св-во, чтобы не прыгала страница, если прыгает, убираем
+  overflow-y: hidden;
+
+  body {
+    overflow: scroll;
+    height: 100dvh;
+  }
 }
 
 .section {

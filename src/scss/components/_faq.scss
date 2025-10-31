@@ -21,18 +21,43 @@
     }
   }
 
+  &__tabs-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(18);
+
+    margin: 0 auto rem(60) auto;
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(10);
+      margin-bottom: rem(22);
+    }
+  }
+
+  &__tabs-info {
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #615e71;
+
+    @include mobile {
+      font-size: rem(14);
+    }
+  }
+
   &__tabs {
     display: grid;
     grid-template-columns: repeat(3, auto);
 
-    margin: 0 auto rem(60) auto;
     border-radius: rem(100);
     padding: rem(4);
     width: rem(689);
     background: #e2f8f3;
     @include mobile {
       width: rem(308);
-      margin-bottom: rem(22);
     }
   }
 
@@ -50,23 +75,23 @@
 
     transition: 0.3s ease;
 
-    cursor: pointer;
+    // cursor: pointer;
     @include mobile {
       height: rem(48);
       text-align: center;
       padding: rem(10) rem(22);
     }
-    &:not(&.active):hover {
-      background: #cdece5;
-    }
+    // &:not(&.active):hover {
+    //   background: #cdece5;
+    // }
 
-    &.active {
-      background: #19b28d;
+    // &.active {
+    //   background: #19b28d;
 
-      .faq__tab-title {
-        color: #fff;
-      }
-    }
+    //   .faq__tab-title {
+    //     color: #fff;
+    //   }
+    // }
   }
 
   &__tab-title {
@@ -263,6 +288,46 @@
 
         @include mobile {
           margin-bottom: rem(8);
+        }
+      }
+    }
+
+    div {
+      div {
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: #615e71;
+        margin-bottom: rem(10);
+
+        @include mobile {
+          font-size: rem(14);
+        }
+      }
+
+      ul {
+        padding-left: rem(30);
+      }
+
+      li {
+        font-weight: 400;
+        font-size: rem(18);
+        line-height: 120%;
+        letter-spacing: -0.03em;
+        color: #615e71;
+        list-style-type: disc;
+
+        @include mobile {
+          font-size: rem(14);
+        }
+
+        &:not(:last-child) {
+          margin-bottom: rem(12);
+        }
+
+        &::marker {
+          color: #fc63d5;
         }
       }
     }
